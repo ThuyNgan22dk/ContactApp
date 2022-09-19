@@ -27,13 +27,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
 
         binding.rvContacts.setLayoutManager(new LinearLayoutManager(this));
-        contactsList = new ArrayList<Contact>();
+        contactsList = new ArrayList<>();
         contactsAdapter = new ContactsAdapter(contactsList);
         binding.rvContacts.setAdapter(contactsAdapter);
 
         contactsList.add(new Contact("Nguyen Van A", "0923123542","a@gmail.com"));
-        contactsList.add(new Contact("Nguyen Van B", "0923123531","b@gmail.com"));;
-        contactsList.add(new Contact("Nguyen Van C", "0923123612","c@gmail.com"));;
+        contactsList.add(new Contact("Nguyen Van B", "0923123531","b@gmail.com"));
+        contactsList.add(new Contact("Nguyen Van C", "0923123612","c@gmail.com"));
         contactsAdapter.notifyDataSetChanged();
 
         AsyncTask.execute(new Runnable() {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                 appDatabase = AppDatabase.getInstance(getApplicationContext());
                 contactDao = appDatabase.contactDao();
 
-                contactDao.insert(new Contact("Nguyen Van A","0923123542","a@gmail.com"));
+//                contactDao.insert(new Contact("Nguyen Van A","0923123542","a@gmail.com"));
             }
         });
     }

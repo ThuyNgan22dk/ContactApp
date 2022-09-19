@@ -11,10 +11,19 @@ public class Contact {
 
     @ColumnInfo
     private String name;
+
     @ColumnInfo
     private String mobile;
     @ColumnInfo
     private String email;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public Contact(String name, String mobile, String email) {
         this.name = name;
