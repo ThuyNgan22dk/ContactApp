@@ -41,16 +41,15 @@
                 android:layout_height="180dp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_baseline_person_24">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="end|bottom"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginBottom="8dp"
-                    android:src="@drawable/ic_baseline_photo_camera_24"
-                    app:tint="@color/white" />
             </ImageView>
-
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_baseline_photo_camera_24"
+                app:tint="@color/white" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
