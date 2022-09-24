@@ -1,10 +1,14 @@
 package com.example.contactapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.contactapp.databinding.ActivityMainBinding;
@@ -45,5 +49,12 @@ public class MainActivity extends AppCompatActivity {
 //                contactDao.insert(new Contact("Nguyen Van A","0923123542","a@gmail.com"));
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.top_app_bar_main, menu);
+
+        return true;
     }
 }
