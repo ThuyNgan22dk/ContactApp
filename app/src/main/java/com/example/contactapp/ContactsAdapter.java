@@ -1,20 +1,34 @@
 package com.example.contactapp;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Adapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHolder> {
     private ArrayList<Contact> contactList;
-    public ContactsAdapter(ArrayList<Contact> contactList) {
+    public ContactsAdapter(ArrayList<Contact> contactList, Context context) {
         this.contactList = contactList;
+    }
+
+    // method for filtering our recyclerview items.
+    public void filterList(ArrayList<Contact> filterlist) {
+        // below line is to add our filtered
+        // list in our course array list.
+        contactList = filterlist;
+        // below line is to notify our adapter
+        // as change in recycler view data.
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -25,7 +39,9 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHo
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ContactsAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ContactsAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        // setting data to our views of recycler view.
+        Contact model = contactList.get(position);
         holder.tvName.setText(contactList.get(position).getName());
     }
 

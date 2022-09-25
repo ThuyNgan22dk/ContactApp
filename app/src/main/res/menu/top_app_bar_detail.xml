@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/star"
+        android:icon="@drawable/ic_baseline_star_border_24"
+        android:title="star"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/edit"
+        android:icon="@drawable/ic_baseline_create_24"
+        android:title="edit"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/more"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        android:title="more"
+        app:showAsAction="ifRoom"/>
+</menu>
