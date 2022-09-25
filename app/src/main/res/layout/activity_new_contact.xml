@@ -1,47 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NewContactActivity">
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/topAppBar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            app:title="Create new contact"
-            app:menu="@menu/top_app_bar"
-            app:navigationIcon="@drawable/ic_baseline_close_24"
-            android:background="#3F51B5"
-            style="@style/Widget.MaterialComponents.Toolbar.Primary"
-            />
-    </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
             android:background="#6D8285"
             android:layout_gravity="top">
             <ImageView
-                android:layout_width="300dp"
+                android:layout_width="match_parent"
                 android:layout_height="240dp"
-                android:layout_marginLeft="58dp"
                 android:src="@drawable/ic_baseline_person_24">
             </ImageView>
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="end|bottom"
-                android:layout_marginLeft="18dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
                 android:src="@drawable/ic_baseline_photo_camera_24"
                 app:tint="@color/white" />
         </LinearLayout>
@@ -99,7 +84,7 @@
                     app:tint="#777">
                 </ImageView>
                 <LinearLayout
-                    android:layout_width="300dp"
+                    android:layout_width="250dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_marginLeft="20dp">
@@ -134,7 +119,7 @@
                     app:tint="#777">
                 </ImageView>
                 <LinearLayout
-                    android:layout_width="300dp"
+                    android:layout_width="250dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_marginLeft="20dp">
@@ -168,7 +153,7 @@
                     app:tint="#777">
                 </ImageView>
                 <LinearLayout
-                    android:layout_width="300dp"
+                    android:layout_width="250dp"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:layout_marginLeft="20dp">
@@ -198,9 +183,4 @@
                 android:layout_marginLeft="58dp"/>
         </LinearLayout>
     </LinearLayout>
-
-
-
-
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
