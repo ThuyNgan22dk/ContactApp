@@ -1,5 +1,6 @@
 package com.example.contactapp;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,8 +14,18 @@ import java.util.ArrayList;
 
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.ViewHolder> {
     private ArrayList<Contact> contactList;
-    public ContactsAdapter(ArrayList<Contact> contactList) {
+    public ContactsAdapter(ArrayList<Contact> contactList, Context context) {
         this.contactList = contactList;
+    }
+
+    // method for filtering our recyclerview items.
+    public void filterList(ArrayList<Contact> filterlist) {
+        // below line is to add our filtered
+        // list in our course array list.
+        contactList = filterlist;
+        // below line is to notify our adapter
+        // as change in recycler view data.
+        notifyDataSetChanged();
     }
 
     @NonNull
